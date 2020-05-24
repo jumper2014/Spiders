@@ -14,6 +14,10 @@ class DoubanMovieTop250Spider(Spider):
         yield Request(url, headers=self.headers)
 
     def parse(self, response):
+        # # 命令行调试代码
+        # from scrapy.shell import inspect_response
+        # inspect_response(response, self)
+
         item = DoubanMovieItem()
         movies = response.xpath('//ol[@class="grid_view"]/li')
         for movie in movies:

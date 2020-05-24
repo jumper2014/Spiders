@@ -64,9 +64,10 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'Spiders.pipelines.SpidersPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'Spiders.pipelines.SpidersPipeline': 300,
+'Spiders.pipelines.DoubanMovieTop250Pipeline': 400,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
