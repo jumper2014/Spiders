@@ -8,6 +8,9 @@ class DoubanMovieTop250Spider(Spider):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36',
     }
+    custom_settings = {  # custom_settings会覆盖掉settings.py中的配置项
+        'LOG_LEVEL': 'DEBUG',
+    }
 
     def start_requests(self):
         url = 'https://movie.douban.com/top250'
